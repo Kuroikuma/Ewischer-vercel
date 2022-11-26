@@ -5,5 +5,15 @@
         "use": "@vercel/node"
       }
     ],
-    "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      },
+      {
+        "src": "./Controller/TaskController.js",
+        "methods": ["POST", "GET","PUT"],
+        "dest": "/api/task"
+      }
+    ]
   }
