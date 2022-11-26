@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const routes = require('./routes')
+const { module } = require('./DB/dbConeccionMongo')
 
 const app = express()
 
@@ -33,3 +34,5 @@ app.use((error, request, response, next) => {
 app.listen(process.env.PORT || 3001, function () {
     console.log(`Server de Portafolio levantado en Port:${process.env.PORT}`)
   })
+
+  module.exports = app
