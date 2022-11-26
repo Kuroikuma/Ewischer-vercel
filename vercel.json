@@ -1,0 +1,19 @@
+{
+    "builds": [
+      {
+        "src": "./index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      },
+      {
+        "src": "/api/task",
+        "methods": ["POST", "GET","PUT"],
+        "dest": "/api/task.js"
+      }
+    ]
+  }
