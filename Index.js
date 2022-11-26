@@ -34,5 +34,3 @@ app.use((error, request, response, next) => {
 app.listen(process.env.PORT || 3001, function () {
     console.log(`Server de Portafolio levantado en Port:${process.env.PORT}`)
   })
-
-  module.exports = app
